@@ -1,0 +1,147 @@
+body{
+
+    margin:0;
+
+    font-family:Poppins;
+
+    background-image:
+    linear-gradient(
+    rgba(0,0,50,0.7),
+    rgba(0,0,50,0.7)),
+    url(hospital.jpg);
+
+    background-size:cover;
+
+    color:white;
+}
+
+
+
+header{
+
+    background-image:
+    linear-gradient(
+    to right,
+    #2193b0,
+    #6dd5ed
+    );
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0px 5px 10px black;
+}
+
+header h1{
+
+    font-size:60px;
+
+    text-shadow:3px 3px 5px black;
+
+    margin:10px;
+}
+
+header p{
+
+    opacity:0.8;
+    text-shadow:1px 4px 3px black;
+    font-size:20px;
+    letter-spacing:3px;
+}
+
+
+.card{
+
+    width:700px;
+
+    height:615px;
+
+    background-color:
+    rgba(255,255,255,0.1);
+
+    border:3px solid white;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    margin-top:50px;
+
+    box-shadow:0px 5px 20px #6dd5ed;
+}
+
+.card img{
+
+    width:240px;
+
+    height:300px;
+    box-shadow:0px 10px 4px #51d3f0;
+    border-radius:20px;
+
+    border:4px solid white;
+}
+
+.card h2{
+
+    font-size:40px;
+
+    color:#6dd5ed;
+
+    text-shadow:2px 2px 5px black;
+
+    margin-top:20px;
+}
+
+.card p{
+
+    font-size:20px;
+
+    line-height:35px;
+    text-align:justify;
+    opacity:0.9;
+}
+
+
+
+button{
+
+    width:200px;
+
+    height:60px;
+
+    border:none;
+    font-weight:bold;
+    border-radius:50px;
+
+    background-image:
+    linear-gradient(
+    to right,
+    #2193b0,
+    #6dd5ed
+    );
+
+    color:white;
+
+    font-size:22px;
+
+    margin-top:20px;
+
+    box-shadow:0px 5px 10px black;
+}
+
+footer{
+
+     background-image:
+    linear-gradient(
+    to right,
+    #2193b0,
+    #6dd5ed
+    );
+    padding:20px;
+
+    margin-top:50px;
+    box-shadow:0px -5px 10px black;
+    text-align:center;
+}
+
