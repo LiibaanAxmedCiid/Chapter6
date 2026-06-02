@@ -1,56 +1,145 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<link rel="icon" href="CIIDKA.png" type="image/x-icon">
-<title>CIID Hospital</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Salary System</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="nn.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- SheetJS -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+
 </head>
-
 <body>
 
-<header>
+<div class="container">
 
-<h1>CIID Hospital <i class="fa-solid fa-stethoscope"></i></h1>
+  <div class="header">
+    <h1><i class="fa-solid fa-person-chalkboard"></i> Teacher Salary System</h1>
+  </div>
 
-<p>Caafimaadkaagu waa mudnaanteenna 1aad.</p>
+  <div class="form-grid">
 
-</header>
+    <input type="text" id="teacherName" placeholder="Teacher Name">
 
-<center>
+    <input type="month" id="monthPicker">
 
-<div class="card">
+    <input type="number" id="rate" placeholder="Rate Per Hour">
 
-<img src="CIIDKA.png" alt="Hospital Image">
+  </div>
 
-<h2>24 Hours Medical Care</h2>
+  <div class="days-grid">
 
-<p>
+    <!-- Sunday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Sunday" class="dayCheck">
+        <span class="checkmark"></span>
+        Axad
+      </label>
 
-CIID hospital waa isbitaal bixiya adeegyo caafimaad oo tayo sare leh 
-24 saacadood,Wuxuu ku dedaalaa in uu siiyo bukaannada daryeel caafimaad oo degdeg ah.
-</p>
+      <input type="number" id="SundayHours" placeholder="Hours">
+    </div>
 
-<button>Contact Us</button>
+    <!-- Monday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Monday" class="dayCheck">
+        <span class="checkmark"></span>
+        Isniin
+      </label>
+
+      <input type="number" id="MondayHours" placeholder="Hours">
+    </div>
+
+    <!-- Tuesday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Tuesday" class="dayCheck">
+        <span class="checkmark"></span>
+        Talaado
+      </label>
+
+      <input type="number" id="TuesdayHours" placeholder="Hours">
+    </div>
+
+    <!-- Wednesday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Wednesday" class="dayCheck">
+        <span class="checkmark"></span>
+        Arbaco
+      </label>
+
+      <input type="number" id="WednesdayHours" placeholder="Hours">
+    </div>
+
+    <!-- Thursday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Thursday" class="dayCheck">
+        <span class="checkmark"></span>
+        Khamiis
+      </label>
+
+      <input type="number" id="ThursdayHours" placeholder="Hours">
+    </div>
+
+    <!-- Friday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Friday" class="dayCheck">
+        <span class="checkmark"></span>
+        Jimco
+      </label>
+
+      <input type="number" id="FridayHours" placeholder="Hours">
+    </div>
+
+    <!-- Saturday -->
+    <div class="day-card">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="Saturday" class="dayCheck">
+        <span class="checkmark"></span>
+        Sabti
+      </label>
+
+      <input type="number" id="SaturdayHours" placeholder="Hours">
+    </div>
+
+  </div>
+
+  <button class="calculate-btn" onclick="calculateSalary()">
+    Calculate Salary
+  </button>
+
+  <div id="result" class="result-box"></div>
+
+  <div class="download-buttons">
+
+    <button onclick="downloadPDF()">
+      <i class="fa-solid fa-file-pdf"></i>
+      Download PDF
+    </button>
+
+    <button onclick="downloadExcel()">
+      <i class="fa-solid fa-file-excel"></i>
+      Download Excel
+    </button>
+
+  </div>
 
 </div>
 
-</center>
-
-<footer>
-
-<p>
-
-© 2026 CIID Hospital 
-<p><i class="fa-brands fa-whatsapp"> </i>+252- 615050047 &nbsp;&nbsp;</p>
-</p>
-<p><i class="fa-brands fa-facebook"></i> JUST Hospital &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-</footer>
+<script src="script.js"></script>
 
 </body>
-
 </html>
